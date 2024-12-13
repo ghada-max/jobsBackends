@@ -1,6 +1,8 @@
 package com.ghada.microservice.job.controller;
 
 import com.ghada.microservice.job.Dao.job;
+import com.ghada.microservice.job.external.jobWithCompanyDto;
+
 import com.ghada.microservice.job.service.JobServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +28,7 @@ public class jobController {
         return "Job added successfully";
     }
     @GetMapping("/getJobById/{id}")
-    public Optional<job> findJobById(@PathVariable Long id){
+    public jobWithCompanyDto findJobById(@PathVariable Long id){
         return jobServ.findJobById(id);
     }
 
@@ -40,7 +42,7 @@ public class jobController {
     }
 
     @GetMapping("/getAll")
-    public List<job> findAll(){
+    public List<jobWithCompanyDto> findAll(){
         return jobServ.findAll();
     }
 

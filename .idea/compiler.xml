@@ -10,14 +10,18 @@
         <module name="companymicroservice" />
         <module name="firstjobapp" />
         <module name="reviewmicroservice" />
+        <module name="discoveryServer" />
         <module name="job-microservice" />
+        <module name="gateway" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="companymicroservice" options="-parameters" />
+      <module name="discoveryServer" options="-parameters" />
       <module name="firstjobapp" options="-parameters" />
+      <module name="gateway" options="-parameters" />
       <module name="job-microservice" options="-parameters" />
       <module name="reviewmicroservice" options="-parameters" />
     </option>

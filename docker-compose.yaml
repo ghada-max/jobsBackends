@@ -1,4 +1,12 @@
 services:
+  zipkin:
+    container_name: zipkinT
+    image: openzipkin/zipkin
+    ports:
+      - 9412:9411
+    networks:
+      - microservices-net
+
   postgres:
     container_name: postgres
     image: postgres
